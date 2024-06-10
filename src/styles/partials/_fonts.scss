@@ -1,0 +1,37 @@
+$heading-fontfam: "Montserrat Alternates", Helvetica, sans-serif;
+$text-fontfam: "Mukta", Helvetica, sans-serif;
+
+@font-face {
+  font-family: "Montserrat Alternates";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../../../src/assets/fonts/montserrat-alternates/MontserratAlternates-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat Alternates";
+  src: url("../../../src/assets/fonts/montserrat-alternates/MontserratAlternates-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: url("../../../src/assets/fonts/mukta/Mukta-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: url("../../../src/assets/fonts/mukta/Mukta-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: url("../../../src/assets/fonts/mukta/Mukta-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}

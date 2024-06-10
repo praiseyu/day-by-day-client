@@ -1,0 +1,18 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+
+.error{
+    font-size: 10px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    color: $error-color;
+    margin-top: 0.25rem;
+    font-weight: 500;
+    font-family: $text-fontfam;
+
+    &__icon{
+        width: 1rem;
+        margin-right: 0.25rem;
+    }
+}

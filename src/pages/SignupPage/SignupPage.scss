@@ -1,0 +1,104 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+
+.signup-pg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    font-size: 2.5rem;
+    padding: 0 0 1.5rem;
+  }
+}
+
+.signup-form {
+  width: 42.5rem;
+  padding: 3.5rem 0 4.5rem;
+  background-color: $secondary-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border: 2.5px solid $primary-black;
+  border-radius: 0.625rem;
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__btn-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 2rem;
+    padding-bottom: 0.75rem;
+  }
+
+  &__label {
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 25.25rem;
+  }
+
+  &__input {
+    height: 2rem;
+    width: 100%;
+    border: 2px solid $primary-black;
+    border-radius: 0.625rem;
+    padding-left: 0.5rem;
+
+    &::placeholder {
+      color: $placeholder-text;
+    }
+
+    &:focus {
+      outline-style: none;
+      border: 2px solid $secondary-rust;
+    }
+
+    &--error {
+      border: 2px solid $error-color;
+    }
+  }
+
+  &__submit-cta {
+    font-family: "Montserrat Alternates";
+    width: 100%;
+    height: 2rem;
+    color: $primary-white;
+    background-color: $secondary-rust;
+    border: none;
+    border-radius: 0.625rem;
+
+    &:hover {
+      filter: brightness(120%);
+      cursor: pointer;
+    }
+  }
+
+  &__link {
+    @include link-styles;
+    font-weight: bold;
+    font-family: $text-fontfam;
+  }
+}

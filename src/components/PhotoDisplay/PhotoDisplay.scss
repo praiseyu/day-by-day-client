@@ -1,0 +1,29 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+
+.photo-grid{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    text-align: center;
+
+    &__title{
+        padding-bottom: 0.5rem;
+    }
+  
+    &__gallery{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__card{
+        height: 3.125rem;
+    }
+
+    &__photo{
+        height: 100%;
+        object-fit: contain;
+    }
+}
+

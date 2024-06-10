@@ -1,0 +1,62 @@
+@use "./colors" as *;
+@use "./fonts" as *;
+
+@mixin tablet {
+  @media screen and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin link-styles {
+  text-decoration: none;
+  color: $primary-black;
+  position: relative;
+  font-family: "Montserrat Alternates", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: rgb(204,198,216);
+    background: linear-gradient(
+      90deg,
+      rgba(204, 198, 216, 1) 0%,
+      rgba(166, 124, 151, 1) 100%
+    );
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -8px;
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    color: $secondary-black;
+    font-weight: bold;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+@mixin btn-style{
+  font-family: "Montserrat Alternates", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: $primary-black;
+  border: 2px solid $primary-black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, .25);
+  height: 40px;
+  padding: 0 1rem;
+
+  &:hover{
+    filter: brightness(90%);
+    cursor: pointer;
+  }
+}

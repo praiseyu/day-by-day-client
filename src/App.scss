@@ -1,0 +1,28 @@
+@use "./styles/partials/fonts" as *;
+@use "./styles/partials/colors" as *;
+
+*,
+*::before,
+*::after,
+*:visited {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+  background-color: $primary-white;
+}
+
+h1, h2, h3, h4, a, button{
+  font-family: "Montserrat Alternates", Helvetica, sans-serif;
+}
+
+p, a, input, label{
+  font-family: "Mukta", Helvetica, sans-serif;
+}
+
+.project-toasts{
+  font-family: $text-fontfam;
+  padding: 1rem;
+}

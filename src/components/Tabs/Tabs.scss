@@ -1,0 +1,59 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+
+.sidebar {
+  width: 18.75rem;
+  display: flex;
+  height: 37.5rem;
+
+  &__tabs-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tab-title {
+    font-size: 1rem;
+  }
+}
+
+.tabs {
+  padding: 0 0.5rem;
+  height: 100%;
+  writing-mode: vertical-rl;
+  text-align: center;
+  transform: rotate(-180deg);
+  border-width: 2px 2px 2px 2px;
+  border-color: $primary-black;
+  border-style: solid;
+  border-radius: 0 10px 10px 0;
+  background-color: $primary-white;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.active-tab {
+  background-color: $primary-purple;
+  border-left: 0px;
+}
+
+.content-container {
+  align-items: stretch;
+  justify-items: stretch;
+}
+
+.content {
+  background-color: $primary-purple;
+  border-top: 2px solid $primary-black;
+  border-bottom: 2px solid $primary-black;
+  padding: 1rem;
+  width: 15.625rem;
+  height: 100%;
+  display: none;
+}
+
+.active-content {
+  display: block;
+}

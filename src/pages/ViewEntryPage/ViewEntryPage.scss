@@ -1,0 +1,49 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+
+.entry {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.edit-entry {
+  padding: 1rem 2.5rem;
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding: 1rem 2.75rem;
+  }
+  &__tagline {
+    font-family: "Montserrat Alternates", Helvetica, sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  &__btns-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 2.75rem;
+    gap: 1.5rem;
+  }
+
+  &__cancel-btn {
+    @include btn-style;
+    background-color: $cancel-btn;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border: 2px solid $primary-black;
+  }
+
+  &__save-btn {
+    @include btn-style;
+    background-color: $primary-purple;
+    border: none;
+    border: 2px solid $primary-black;
+  }
+}

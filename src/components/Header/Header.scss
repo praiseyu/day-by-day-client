@@ -1,0 +1,77 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.navbar{
+    width: 100%;
+    height: 5.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.5rem 8.25rem;
+
+    &__left-wrapper,
+    &__right-wrapper{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    &__logo-img{
+        width: 5.75rem;
+        height: 3.9375rem;
+    }
+
+    &__link{
+        @include link-styles;
+    }
+}
+
+.active{
+    text-decoration-line:underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 10px;
+    text-decoration-color: $secondary-purple;
+}
+
+.authnavbar{
+    width: 100%;
+    height: 5.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-white;
+    padding: 3.5rem 8.25rem;
+
+    &__left-wrapper,
+    &__right-wrapper{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+    &__logo-img{
+        width: 5.75rem;
+        height: 3.9375rem;
+        &:hover{
+            filter: brightness(200%);
+        }
+    }
+
+    &__link{
+        @include link-styles;
+    }
+
+    &__logout-btn{
+        @include btn-style;
+        height: 1.875rem;
+        background-color: $cancel-btn;
+    }
+}
+
+.active{
+    text-decoration-line:underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8.5px;
+    text-decoration-color: $secondary-purple;
+}
