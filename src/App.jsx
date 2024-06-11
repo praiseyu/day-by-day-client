@@ -12,6 +12,7 @@ import AddEntryPage from "./pages/AddEntryPage/AddEntryPage";
 import TripDetailsPage from "./pages/TripDetailsPage/TripDetailsPage";
 import AuthProvider from "./context/AuthContext";
 import PrivateRoutes from "./utils/PrivateRoutes";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import "./App.scss";
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
                 element={<ViewEntryPage />}
               />
             </Route>
+            <Route path="*" element={<NotFoundPage />}/> 
           </Routes>
         </AuthProvider>
       </BrowserRouter>
