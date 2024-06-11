@@ -70,14 +70,23 @@ CLOUD_NAME=cloudinary_cloud_name
 JWT_SECRET=jwt_secret
 ```
 
-4. **Run the application**
+4. **Connect the database and create schema**
+
+This project uses MySQL. Create a connection with your database using your own host, username, password, and database name. 
+
+Then, to create the database schema, in the server directory, run:
+
+```bash
+npm db:migrate
+```
+
+5. **Run the application**
 
 To start the development server for the client-side, run:
 
 ```bash
 npm run dev
 ```
-
 To start a local server, run:
 
 ```bash
