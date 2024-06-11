@@ -6,7 +6,6 @@ While traveling, it's easy to take photos or jot down memories in a journal. How
 
 This app is designed for travelers who want to remember what they saw, ate, drank, and where they went on specific days during their trips. It’s perfect for those who don't want to spend a lot of time making a physical scrapbook or writing in a journal but still want a comprehensive log of their travels.
 
-
 ## Features
 
 - **User Authentication:** Securely sign up and log in to access and manage your personal journal.
@@ -17,9 +16,6 @@ This app is designed for travelers who want to remember what they saw, ate, dran
 - **Trip List** Displays a list of all your trips and their respective start and end dates.
 - **Trip Details** Shows the list of all the days on a trip and the entry status for each day so you can see which days you are missing entries for.
 
-## Installation
-
-
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
@@ -29,16 +25,20 @@ Before you begin, ensure you have met the following requirements:
 
 ## Installation
 
-Follow these steps to set up and run the project locally.
+Follow these steps to set up and run the project locally. The server and client repositories are separate. Follow these steps for each repository:
 
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/day-to-day-client.git
-cd day-to-day-client
+git clone git@github.com:praiseyu/day-by-day-server.git
+cd day-by-day-server
+```
+```bash
+git clone git@github.com:praiseyu/day-by-day-client.git
+cd day-by-day-client
 ```
 
-2. **Install dependencies**
+2. **Install dependencies in each folder**
 
 ```bash
 npm install
@@ -48,36 +48,40 @@ npm install
 
 Create a `.env` file in the root directory and add your environment variables:
 
+In the client folder:
+
 ```plaintext
-VITE_LOCALHOST=http://your-api-url
+VITE_LOCALHOST=http://localhost:8080
+```
+
+In the server folder:
+
+```plaintext
+PORT=server_port || 8080
+DB_HOST=db_host
+DB_NAME=db_name
+DB_USER=db_username
+DB_PASSWORD=db_password
+CORS_ORIGIN = front_end_url
+CLOUDINARY_URL=cloudinary_url
+API_KEY=cloudinary_api_key
+API_SECRET=cloudinary_api_secret
+CLOUD_NAME=cloudinary_cloud_name
+JWT_SECRET=jwt_secret
 ```
 
 4. **Run the application**
 
-To start the development server, run:
+To start the development server for the client-side, run:
 
 ```bash
 npm run dev
 ```
 
-To build the application for production, run:
+To start a local server, run:
 
 ```bash
-npm run build
-```
-
-To preview the production build, run:
-
-```bash
-npm run preview
-```
-
-5. **Lint the code**
-
-To lint the code, run:
-
-```bash
-npm run lint
+npm start
 ```
 
 ## API Reference
