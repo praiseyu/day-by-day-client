@@ -5,7 +5,7 @@ import DeleteModal from "../DeleteModal/DeleteModal";
 import "./PhotoDisplay.scss";
 
 export default function PhotoDisplay({ photoItems, setPhotoItems }) {
-  const { entryDate } = useParams();
+  const { entryDate, tripId } = useParams();
   const user = useAuth();
   const token = user.token;
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -50,6 +50,7 @@ export default function PhotoDisplay({ photoItems, setPhotoItems }) {
           handleDelete={handleDelete}
           entryDate={entryDate}
           token={token}
+          tripId={tripId}
         />
       </div>
     </section>

@@ -330,18 +330,22 @@ Signup Page showing active state when user clicks into the textbox.
 
 ### Dashboard (My Trips Page)
 My Trips Page shows the user's name when logged in, the list of trips that they want to create logs for, and an add trip form below to add a new trip. There is also a logout button when a user is signed in so they can log out.
+
 ![My Trips Page (Dashboard)](./docs/images/authUserDashboard.png)
 
 ### Dashboard (My Trips Page) - Validation & Hover Effect
 On the My Trips Page, it shows the hover effect when hovering over a trip as well as the form validation on the add trip form.
+
 ![Add New Trip Field Validation and Hover Effect on Trip List](./docs/images/dashboardHoverValidation.png)
 
 ### Dashboard (Toasts)
 When a new trip is added, a toast pops up alerting the user to the new trip and the new trip is displayed in the list.
+
 ![Add Trip Toast Notification](./docs/images/addTripToast.png)
 
 ### Trip Details Page 
 When a trip is clicked on, it takes the user to the Trip Details Page. This displays a list of all the days on their trip, if the user has submitted a log for that day yet, and a corresponding add/edit button so the user can create or update their entry. The title is highlighted at the top in purple and the option to go back to the My Trips Page is available as well as the Delete Trips button.
+
 ![Trip Details Page](./docs/images/tripDetailsPage.png)
 
 ### Trip Details Page (Delete Trips Functionality)
@@ -355,13 +359,28 @@ When a user clicks the add entry button, they are taken to this layout, where th
 ![Upload Photo Preview](./docs/images/uploadPreview.png)
 
 Once uploaded, the photo will display in a gallery in the bottom of the tab as part of Today's Photos and it will be rendered onto the "journal page" as well. The buttons become a "New Upload" button and a disabled button that says "Uploaded". 
+
 ![Uploaded Photo Result](./docs/images/uploadedPhotoProcess.png)
 
 When a photo is being uploaded, an "uploading..." toast will pop up and notify the user when the upload is complete.
+
 ![Uploading Photo Toast](./docs/images/uploadingPhotoToast.png)
+
+### Add Entry Page (Deleting Photos)
+In the photos tab, in the Today's Photos section, when a user clicks on a photo, they have the option to delete the photo. The delete modal will pop up asking the user for confirmation. 
+
+![Delete Photo Modal](./docs/images/deletePhotoModal.png)
+
+If the delete request is unsuccessful, a toast will notify the user.
+![Delete Error Photo Toast](./docs/images/errorDeletePhotoToast.png)
+
+If successful, the user will be notified with a toast, and in the following picture, the photo that was last uploaded had been deleted succesfully and is removed from the layout.
+
+![Delete Photo Success Toast](./docs/images/successPhotoDeleteToast.png)
 
 ### Add Entry Page (Add Text & Move Items)
 When the Text tab is clicked, it takes the user to the upload text function where they can type in anything and it will be added to the entry. The photos and text blocks can also be resized and moved anywhere on the "journal pages".
+
 ![Add text items and resize photos and text.](./docs/images/addText.png)
 
 ### Add Entry Page (Design Tab)
@@ -374,7 +393,19 @@ When customizing colours and border width, once the user has selected different 
 
 ### Add Entry Page (Save Photo Toast, Entry List Updated)
 When the user clicks on save entry, the layout of the text & photos is saved. A toast will pop up informing the user of the successful entry save and then redirect them back to the Trip Details Page for that specific trip.
+
 ![Saving a New Entry](./docs/images/saveAddEntry.png)
 
 The user gets redirected to the entry list after saving a new entry and the status for that day changes, informing the user that they have added an entry for that day already. Now they have the option to edit a previously saved entry or add a new entry for a different day. 
+
 ![Entry List Status](./docs/images/statusChangeAfterSave.png)
+
+### Edit Entry Page
+When the user has a previously saved entry, then can still edit it. The user can upload more photos and text as usual and customize the items. When the save button is clicked, a toast will pop up with a success or error message.
+
+![Successful Edit and Save](./docs/images/successfulEditSave.png)
+
+### Logout Redirect
+The user can log out via the logout button and once clicked, a toast notification will confirm their log out and the page is redirected to the login page.
+
+![Logout Message](./docs/images/logoutFunction.png)

@@ -12,10 +12,11 @@ export default function DeleteModal({
   handleDelete,
   entryDate,
   token,
+  tripId
 }) {
   const confirmDelete = async () => {
     const deletePhotoPromise = axios.delete(
-      `${import.meta.env.VITE_LOCALHOST}/api/${entryDate}/photos`,
+      `${import.meta.env.VITE_LOCALHOST}/api/${tripId}/${entryDate}/photos`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

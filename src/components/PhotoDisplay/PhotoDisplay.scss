@@ -24,6 +24,9 @@
     &__photo{
         height: 100%;
         object-fit: contain;
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
 
