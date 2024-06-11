@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import { toast } from "sonner";
 import axios from "axios";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import "./LoginPage.scss";
@@ -66,6 +67,7 @@ export default function LoginPage() {
       navigate("/mytrips");
     } catch (err) {
       console.error(`There was an error logging in: ${err}.`);
+      toast.error(`Login failed. Please double check the email and password.`);
     }
   };
 

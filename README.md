@@ -306,15 +306,28 @@ To run this project, you will need to add the following environment variables to
 
 ## Tech Stack
 
-- React
-- Vite
-- Axios
+- HTML
+- CSS
+- JavaScript
 - Sass
+- React
+- Knex
+- Express
+- MySQL
+- Node.js
+
+## Acknowledgements
+
+These libraries were used to create this app: 
+
+- Axios
+- Dotenv
 - React Router
 - React Grid Layout
 - React Dropzone
 - React Colorful
 - React Modal
+- Sonner
 
 ## Screenshots
 
@@ -409,3 +422,16 @@ When the user has a previously saved entry, then can still edit it. The user can
 The user can log out via the logout button and once clicked, a toast notification will confirm their log out and the page is redirected to the login page.
 
 ![Logout Message](./docs/images/logoutFunction.png)
+
+## Lessons Learned
+- Learning how to use a library or a feature is very time consuming. It felt like no progress was made after spending hours reading documentation and watching videos.
+- Start as early as possible: I did not have a clear picture of what I wanted to do until the final week of the capstone.
+- My capstone proposal roadmap was helpful as it was basically a to-do list of features I wanted to create. However, the order in which I ended up building this application not the way I had outlined in the proposal. Sometimes, I would start work on one feature, then realize I needed another feature before I could implement the one I was working on and had to change my workflow.
+- I should document my work more clearly and regularly. While I had an on-going task list that I would keep adding to, I did not document the work I had already completed or what I had figured out that day. In future projects, I will be sure to outline both my completed work and future tasks each day.
+
+## Next Steps
+- Add delete functionality for text items
+- Figure out how to constrain the react-layout grid vertically so photos cannot be moved past the "journal"
+- Make the site responsive
+- Connect with Spotify API so users can embed a song or playlist for an entry
+- More informative toast styling
