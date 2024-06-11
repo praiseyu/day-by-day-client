@@ -1,4 +1,3 @@
-
 # Day by Day
 
 Day by Day is a digital photo journal app that integrates photos and text entries to create a rich, immersive memory-keeping experience. This app allows users to upload photos from their trips and add snippets of text that provide context and details to daily entries.
@@ -15,7 +14,8 @@ This app is designed for travelers who want to remember what they saw, ate, dran
 - **Daily Entries** Organize your journal by days, creating a comprehensive log of your travels.
 - **Customizable Styles** Personalize your entries with custom border colors, text colors, and border widths.
 - **Edit Entries** Quickly view and edit your entries to keep your journal up to date.
-
+- **Trip List** Displays a list of all your trips and their respective start and end dates.
+- **Trip Details** Shows the list of all the days on a trip and the entry status for each day so you can see which days you are missing entries for.
 
 ## Installation
 
@@ -79,24 +79,6 @@ To lint the code, run:
 ```bash
 npm run lint
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
 
 ## API Reference
 
@@ -435,3 +417,8 @@ The user can log out via the logout button and once clicked, a toast notificatio
 - Make the site responsive
 - Connect with Spotify API so users can embed a song or playlist for an entry
 - More informative toast styling
+- Make the dates more "readable" and display as in this format: "Mon 13 Sept 2023" instead of 2023/09/13
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
