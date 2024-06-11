@@ -296,18 +296,12 @@ npm run lint
 
 **Requires authentication**
 ```
+```
 ##Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file.
 
 `VITE_LOCALHOST`= http://localhost:8080
-
-
-## Acknowledgements
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 
 
 ## Tech Stack
@@ -324,6 +318,63 @@ To run this project, you will need to add the following environment variables to
 
 ## Screenshots
 
-![Login Page with Error State Shown](login.png)
+### Login Page
+Login Page with error states shown when user does not enter the correct information.
 
-![Active State on Signup Page](signup.png)
+![Login Page with Error State Shown](./docs/images/login.png)
+
+### Signup Page
+Signup Page showing active state when user clicks into the textbox. 
+
+![Active State on Signup Page](./docs/images/signup.png)
+
+### Dashboard (My Trips Page)
+My Trips Page shows the user's name when logged in, the list of trips that they want to create logs for, and an add trip form below to add a new trip. There is also a logout button when a user is signed in so they can log out.
+![My Trips Page (Dashboard)](./docs/images/authUserDashboard.png)
+
+### Dashboard (My Trips Page) - Validation & Hover Effect
+On the My Trips Page, it shows the hover effect when hovering over a trip as well as the form validation on the add trip form.
+![Add New Trip Field Validation and Hover Effect on Trip List](./docs/images/dashboardHoverValidation.png)
+
+### Dashboard (Toasts)
+When a new trip is added, a toast pops up alerting the user to the new trip and the new trip is displayed in the list.
+![Add Trip Toast Notification](./docs/images/addTripToast.png)
+
+### Trip Details Page 
+When a trip is clicked on, it takes the user to the Trip Details Page. This displays a list of all the days on their trip, if the user has submitted a log for that day yet, and a corresponding add/edit button so the user can create or update their entry. The title is highlighted at the top in purple and the option to go back to the My Trips Page is available as well as the Delete Trips button.
+![Trip Details Page](./docs/images/tripDetailsPage.png)
+
+### Trip Details Page (Delete Trips Functionality)
+On the trip details page, when the delete button is pressed, a modal will pop up asking the user to confirm if they want to delete this trip or not. When clicked, the trip & its corresponding data is deleted from the database & photos from cloudinary. A toast notification will inform the user when a trip is deleted. 
+
+![Delete Trip Modal](./docs/images/deleteTripModal.png)
+
+### Add Entry Page (Uploading Photos)
+When a user clicks the add entry button, they are taken to this layout, where they can click on tabs to add a daily log. The photos tab lets users upload photos to the layout. When a photo is uploaded, a preview of the image will display and the option to upload or cancel is available.
+
+![Upload Photo Preview](./docs/images/uploadPreview.png)
+
+Once uploaded, the photo will display in a gallery in the bottom of the tab as part of Today's Photos and it will be rendered onto the "journal page" as well. The buttons become a "New Upload" button and a disabled button that says "Uploaded". 
+![Uploaded Photo Result](./docs/images/uploadedPhotoProcess.png)
+
+When a photo is being uploaded, an "uploading..." toast will pop up and notify the user when the upload is complete.
+![Uploading Photo Toast](./docs/images/uploadingPhotoToast.png)
+
+### Add Entry Page (Add Text & Move Items)
+When the Text tab is clicked, it takes the user to the upload text function where they can type in anything and it will be added to the entry. The photos and text blocks can also be resized and moved anywhere on the "journal pages".
+![Add text items and resize photos and text.](./docs/images/addText.png)
+
+### Add Entry Page (Design Tab)
+On the design tab, the user can customize the text colour, border colour of the photos, and the border width of the photos. When the colour swatch is clicked on, a colour picker will pop up and the user can choose any colour. Clicking outside of the colour picker closes it. The same functionality applies to the border colour option. 
+
+![Editing Text Colour](./docs/images/editingTextColour.png)
+
+When customizing colours and border width, once the user has selected different values, a reset button will appear, allowing the user to revert the values back to the default colours and a border width of 0.
+![Entry Customization](./docs/images/customizedEntry.png)
+
+### Add Entry Page (Save Photo Toast, Entry List Updated)
+When the user clicks on save entry, the layout of the text & photos is saved. A toast will pop up informing the user of the successful entry save and then redirect them back to the Trip Details Page for that specific trip.
+![Saving a New Entry](./docs/images/saveAddEntry.png)
+
+The user gets redirected to the entry list after saving a new entry and the status for that day changes, informing the user that they have added an entry for that day already. Now they have the option to edit a previously saved entry or add a new entry for a different day. 
+![Entry List Status](./docs/images/statusChangeAfterSave.png)

@@ -56,7 +56,7 @@ export default function ViewEntryPage() {
   async function getPhotos() {
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_LOCALHOST}/api/${entryDate}/photos`,
+        `${import.meta.env.VITE_LOCALHOST}/api/${tripId}/${entryDate}/photos`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -75,7 +75,7 @@ export default function ViewEntryPage() {
   async function getTextItems() {
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_LOCALHOST}/api/${entryDate}/text`,
+        `${import.meta.env.VITE_LOCALHOST}/api/${tripId}/${entryDate}/text`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
