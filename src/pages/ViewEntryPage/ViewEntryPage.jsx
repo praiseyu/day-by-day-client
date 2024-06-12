@@ -26,9 +26,11 @@ export default function ViewEntryPage() {
   }, []);
 
   async function fetchData() {
-    await getEntriesLayout();
-    await getPhotos();
-    await getTextItems();
+    try{
+      await Promise.all([getEntriesLayout(), getPhotos(), getTextItems()]);
+    } catch(err){
+      console.error(`Error getting hte data: ${err}.`);
+    }
   }
 
   async function getEntriesLayout() {
@@ -66,7 +68,7 @@ export default function ViewEntryPage() {
       if (response.status === 200) {
         setPhotoItems(response.data);
       } else if (response.status === 404) {
-        console.log("line 73");
+        console.error("Photos not found.");
       }
     } catch (err) {
       console.error(`Error getting photos: ${err}.`);

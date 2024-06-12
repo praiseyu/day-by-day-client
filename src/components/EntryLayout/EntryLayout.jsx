@@ -22,9 +22,11 @@ export default function EntryLayout({
       const initialLayout = generateLayout(
         photoItems.length + textItems.length
       );
-      onLayoutChange(initialLayout);
+      setLayout(initialLayout);
+    } else {
+      setLayout(layout);
     }
-    setLayout(layout);
+    
   }, [photoItems, textItems]);
 
   const generateLayout = (items) => {
