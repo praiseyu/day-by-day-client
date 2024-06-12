@@ -98,7 +98,7 @@ export default function TripDetailsPage() {
   }
 
   if (!tripDetails || !entryDetails) {
-    return <div>Loading...</div>;
+    return <div></div>
   }
 
   return (

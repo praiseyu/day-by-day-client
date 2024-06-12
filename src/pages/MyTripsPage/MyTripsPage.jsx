@@ -102,7 +102,7 @@ export default function MyTripsPage() {
   }
 
   if (!trips) {
-    return <div>Loading...</div>;
+    return <div></div>
   }
 
   return (
