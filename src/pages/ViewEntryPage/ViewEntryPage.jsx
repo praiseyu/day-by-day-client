@@ -124,9 +124,6 @@ export default function ViewEntryPage() {
     });
   };
 
-  if (!layout) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <main className="edit-entry">
