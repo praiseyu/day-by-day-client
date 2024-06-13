@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import {toast} from "sonner";
 import axios from "axios";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import "./SignupPage.scss";
@@ -59,7 +60,7 @@ export default function SignupPage() {
     } else {
       try {
         await axios.post(`${import.meta.env.VITE_LOCALHOST}/signup`, formData);
-        alert("Succesfully signed up. Taking you to login page.");
+        toast.success("Succesfully signed up. Taking you to login page.");
         navigate("/login");
       } catch (err) {
         console.error(err);

@@ -64,6 +64,7 @@ export default function LoginPage() {
         email: "",
         password: "",
       });
+      toast.success("Login succesful! Going to dashboard.")
       navigate("/mytrips");
     } catch (err) {
       console.error(`There was an error logging in: ${err}.`);
