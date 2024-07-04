@@ -6,6 +6,12 @@ While traveling, it's easy to take photos or jot down memories in a journal. How
 
 This app is designed for travelers who want to remember what they saw, ate, drank, and where they went on specific days during their trips. It’s perfect for those who don't want to spend a lot of time making a physical scrapbook or writing in a journal but still want a comprehensive log of their travels.
 
+## Related Code
+
+Back End Code: https://github.com/praiseyu/day-by-day-server
+
+Live Website: https://daybydayjournal.netlify.app/
+
 ## Features
 
 - **User Authentication:** Securely sign up and log in to access and manage your personal journal.
